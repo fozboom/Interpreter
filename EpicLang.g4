@@ -39,10 +39,10 @@ expression:
 	| expression op = ('+' | '-') expression				# AddSubExpr
 	| expression op = ('<' | '<=' | '>' | '>=') expression	# CompareExpr
 	| expression op = ('==' | '!=') expression				# EqualityExpr
-	| expression op = '&' expression						# AndExpr
-	| expression op = '|' expression						# OrExpr
-	| functionCall											# FunctionCallExpr
-	| IDENTIFIER											# VarExpr;
+	// | expression op = '&' expression # AndExpr | expression op = '|' expression # OrExpr
+	| expression op = ('&' | '|') expression	# LogicalExpr
+	| functionCall								# FunctionCallExpr
+	| IDENTIFIER								# VarExpr;
 
 indexSequence: '[' expression ']' ( '[' expression ']')*;
 
@@ -52,7 +52,9 @@ functionCall:
 
 argumentList: expression (',' expression)*;
 
-assignment: IDENTIFIER '=' expression;
+assignment:
+	IDENTIFIER '=' expression						# SimpleAssignment
+	| IDENTIFIER '[' expression ']' '=' expression	# ListIndexAssignment;
 
 ifStatement: IF expression THEN statement (ELSE statement)?;
 

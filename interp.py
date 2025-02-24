@@ -348,10 +348,34 @@ class EpicLang(EpicLangVisitor):
             [self.visit(expr) for expr in ctx.expression()] if ctx.expression() else []
         )
 
-    def visitAssignment(self, ctx: EpicLangParser.AssignmentContext):
+    def visitSimpleAssignment(self, ctx: EpicLangParser.SimpleAssignmentContext):
         var_name = ctx.IDENTIFIER().getText()
         value = self.visit(ctx.expression())
         self.variables[var_name] = value
+
+    def visitListIndexAssignment(self, ctx: EpicLangParser.ListIndexAssignmentContext):
+        var_name = ctx.IDENTIFIER().getText()
+        index = self.visit(ctx.expression(0))
+        value = self.visit(ctx.expression(1))
+
+        if var_name not in self.variables:
+            print("runtime error")
+            sys.exit(0)
+
+        lst = self.variables[var_name]
+        if not isinstance(lst, list):
+            print("runtime error")
+            sys.exit(0)
+
+        if not isinstance(index, int):
+            print("runtime error")
+            sys.exit(0)
+
+        if index < 0 or index >= len(lst):
+            print("runtime error")
+            sys.exit(0)
+
+        lst[index] = value
 
     def visitParenExpr(self, ctx: EpicLangParser.ParenExprContext):
         return self.visit(ctx.expression())
@@ -370,23 +394,34 @@ class EpicLang(EpicLangVisitor):
             sys.exit(0)
         return op[ctx.op.text](left, right)
 
-    def visitAndExpr(self, ctx: EpicLangParser.AndExprContext):
+    # def visitAndExpr(self, ctx: EpicLangParser.AndExprContext):
+    #     left = self.visit(ctx.expression(0))
+    #     right = self.visit(ctx.expression(1))
+    #     if not isinstance(left, bool) or not isinstance(right, bool):
+    #         print("runtime error")
+    #         sys.exit(0)
+    #     return left and right
+
+    # def visitOrExpr(self, ctx: EpicLangParser.OrExprContext):
+    #     left = self.visit(ctx.expression(0))
+    #     right = self.visit(ctx.expression(1))
+
+    #     if not isinstance(left, bool) or not isinstance(right, bool):
+    #         print("runtime error")
+    #         sys.exit(0)
+
+    #     return left or right
+
+    def visitLogicalExpr(self, ctx: EpicLangParser.LogicalExprContext):
         left = self.visit(ctx.expression(0))
         right = self.visit(ctx.expression(1))
         if not isinstance(left, bool) or not isinstance(right, bool):
             print("runtime error")
             sys.exit(0)
-        return left and right
-
-    def visitOrExpr(self, ctx: EpicLangParser.OrExprContext):
-        left = self.visit(ctx.expression(0))
-        right = self.visit(ctx.expression(1))
-
-        if not isinstance(left, bool) or not isinstance(right, bool):
-            print("runtime error")
-            sys.exit(0)
-
-        return left or right
+        if ctx.op.text == "|":
+            return left or right
+        else:
+            return left and right
 
     def visitEqualityExpr(self, ctx: EpicLangParser.EqualityExprContext):
         expressions = ctx.expression()
