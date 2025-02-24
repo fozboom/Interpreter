@@ -1,6 +1,8 @@
 import sys
-from antlr4 import FileStream, CommonTokenStream
-from antlr4.error.ErrorListener import ErrorListener, ConsoleErrorListener
+
+from antlr4 import CommonTokenStream, FileStream
+from antlr4.error.ErrorListener import ConsoleErrorListener, ErrorListener
+
 from EpicLangLexer import EpicLangLexer
 from EpicLangParser import EpicLangParser
 from EpicLangVisitor import EpicLangVisitor
@@ -56,7 +58,7 @@ class EpicLang(EpicLangVisitor):
             return len(args[0])
 
         if func_name not in self.functions:
-            print(f"runtime error")
+            print("runtime error")
             sys.exit(0)
 
         func = self.functions[func_name]
@@ -196,7 +198,7 @@ class EpicLang(EpicLangVisitor):
             if var_name in self.variables:
                 return self.variables[var_name]
             else:
-                print(f"runtime error")
+                print("runtime error")
                 sys.exit(0)
 
         # If this is an index access
@@ -204,7 +206,7 @@ class EpicLang(EpicLangVisitor):
             var_name = ctx.IDENTIFIER().getText()
             index = self.visit(ctx.expression())
             if var_name not in self.variables:
-                print(f"runtime error")
+                print("runtime error")
                 sys.exit(0)
 
             value = self.variables[var_name]
@@ -302,7 +304,7 @@ class EpicLang(EpicLangVisitor):
             value = self.variables[var_name]
             return value
         else:
-            print(f"runtime error")
+            print("runtime error")
             sys.exit(0)
 
     def visitListIndexExpr(self, ctx: EpicLangParser.ListIndexExprContext):
@@ -379,38 +381,31 @@ class EpicLang(EpicLangVisitor):
     def visitOrExpr(self, ctx: EpicLangParser.OrExprContext):
         left = self.visit(ctx.expression(0))
         right = self.visit(ctx.expression(1))
+
         if not isinstance(left, bool) or not isinstance(right, bool):
             print("runtime error")
             sys.exit(0)
+
         return left or right
 
     def visitEqualityExpr(self, ctx: EpicLangParser.EqualityExprContext):
-        # Если есть два выражения для сравнения
-        if len(ctx.expression()) == 2:  # x == y == z
-            left = self.visit(ctx.expression(0))  # x
-            right = self.visit(ctx.expression(1))  # y
+        expressions = ctx.expression()
 
-            first_comparison = None
+        # Получаем первое значение
+        left = self.visit(expressions[0])
+
+        # Для каждого следующего выражения проверяем равенство с предыдущим
+        for i in range(1, len(expressions)):
+            right = self.visit(expressions[i])
             if ctx.op.text == "==":
-                first_comparison = left == right
-            elif ctx.op.text == "!=":
-                first_comparison = left != right
+                if left != right:  # Если хоть одно сравнение ложно
+                    return False
+            else:  # для !=
+                if left == right:  # Если хоть одно сравнение истинно
+                    return False
+            left = right  # Обновляем левый операнд для следующего сравнения
 
-            # Проверяем следующее сравнение с третьей частью, если она существует
-            if len(ctx.expression()) == 3:
-                second_comparison = self.visit(ctx.expression(2))  # z
-                return first_comparison and (first_comparison == second_comparison)
-
-            return first_comparison
-        else:
-            # Если только два операнда, например x == y
-            op = {
-                "==": lambda x, y: x == y,
-                "!=": lambda x, y: x != y,
-            }
-            left = self.visit(ctx.expression(0))
-            right = self.visit(ctx.expression(1))
-            return op[ctx.op.text](left, right)
+        return True
 
     def visitListLiteralIndexExpr(
         self, ctx: EpicLangParser.ListLiteralIndexExprContext
@@ -490,4 +485,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        sys.exit(1)

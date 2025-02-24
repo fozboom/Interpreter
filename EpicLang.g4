@@ -2,116 +2,74 @@ grammar EpicLang;
 
 WHITESPACE: [ \t\r\n]+ -> skip;
 
-program
-    : funcDef* EOF
-    ;
+program: funcDef* EOF;
 
-funcDef
-    : FUNC IDENTIFIER '(' params? ')' block
-    ;
+funcDef: FUNC IDENTIFIER '(' params? ')' block;
 
-params
-    : IDENTIFIER (',' IDENTIFIER)*
-    ;
+params: IDENTIFIER (',' IDENTIFIER)*;
 
-block
-    : '{' statement* '}'
-    ;
+block: '{' statement* '}';
 
-statement
-    : block
-    | functionCall ';'
-    | expression ';'
-    | assignment ';'
-    | ifStatement
-    | whileStatement
-    | forStatement
-    | returnStatement ';'
-    | printStatement ';'
-    | break
-    | continue
-    ;
+statement:
+	block
+	| functionCall ';'
+	| expression ';'
+	| assignment ';'
+	| ifStatement
+	| whileStatement
+	| forStatement
+	| returnStatement ';'
+	| printStatement ';'
+	| break
+	| continue;
 
-break:
-    BREAK ';'
-    ;
+break: BREAK ';';
 
-continue:
-    CONTINUE ';'
-    ;
+continue: CONTINUE ';';
 
+expression:
+	IDENTIFIER indexSequence								# ListIndexExpr
+	| expression indexSequence								# ExpressionListIndexExpr
+	| literal												# LiteralExpr
+	| listLiteral											# ListLiteralExpr
+	| listLiteral '[' expression ']'						# ListLiteralIndexExpr
+	| op = ('!' | '+' | '-') expression						# UnaryExpr
+	| '(' expression ')'									# ParenExpr
+	| expression op = ('*' | '/' | '%') expression			# MulDivExpr
+	| expression op = ('+' | '-') expression				# AddSubExpr
+	| expression op = ('<' | '<=' | '>' | '>=') expression	# CompareExpr
+	| expression op = ('==' | '!=') expression				# EqualityExpr
+	| expression op = '&' expression						# AndExpr
+	| expression op = '|' expression						# OrExpr
+	| functionCall											# FunctionCallExpr
+	| IDENTIFIER											# VarExpr;
 
-expression
-    :IDENTIFIER indexSequence                       # ListIndexExpr
-    | expression indexSequence                       # ExpressionListIndexExpr
-    | literal                                        # LiteralExpr
-    | listLiteral                                    # ListLiteralExpr
-    | listLiteral '[' expression ']'                 # ListLiteralIndexExpr
-    | op=('!' | '+' | '-') expression                # UnaryExpr
-    | '(' expression ')'                             # ParenExpr
-    | expression op=('*' | '/' | '%') expression     # MulDivExpr
-    | expression op=('+' | '-') expression           # AddSubExpr
-    | expression op=('<' | '<=' | '>' | '>=') expression # CompareExpr
-    | expression op=('==' | '!=') expression         # EqualityExpr
-    | expression op='&' expression                   # AndExpr
-    | expression op='|' expression                   # OrExpr
-    | functionCall                                   # FunctionCallExpr
-    | IDENTIFIER                                     # VarExpr
+indexSequence: '[' expression ']' ( '[' expression ']')*;
 
-    ;
+functionCall:
+	IDENTIFIER '(' argumentList? ')'
+	| LEN '(' expression ')';
 
-indexSequence
-    : '[' expression ']' ( '[' expression ']' )*
-    ;
+argumentList: expression (',' expression)*;
 
-functionCall
-    : IDENTIFIER '(' argumentList? ')'
-    | LEN '(' expression ')'
-    ;
+assignment: IDENTIFIER '=' expression;
 
-argumentList
-    : expression (',' expression)*
-    ;
+ifStatement: IF expression THEN statement (ELSE statement)?;
 
-assignment
-    : IDENTIFIER '=' expression
-    ;
+whileStatement: WHILE expression DO statement;
 
-ifStatement
-    : IF expression THEN statement (ELSE statement)?
-    ;
+forStatement:
+	FOR IDENTIFIER IN expression DOTS expression DO statement;
 
-whileStatement
-    : WHILE expression DO statement
-    ;
+returnStatement: RETURN expression?;
 
-forStatement
-    : FOR IDENTIFIER IN expression DOTS expression DO statement
-    ;
+printStatement: PRINT expression;
 
-returnStatement
-    : RETURN expression?
-    ;
+literal: INT | TRUE | FALSE | NONE | listLiteral;
 
-printStatement
-    : PRINT expression
-    ;
-
-literal
-    : INT
-    | TRUE
-    | FALSE
-    | NONE
-    | listLiteral
-    ;
-
-listLiteral
-    : '[' (expression (',' expression)*)? ']'
-    ;
-
+listLiteral: '[' (expression (',' expression)*)? ']';
 
 FUNC: 'func';
-
 
 BREAK: 'break';
 CONTINUE: 'continue';
@@ -132,9 +90,5 @@ DOTS: '..';
 BOOL: TRUE | FALSE;
 IDENTIFIER: [a-zA-Z_][a-zA-Z0-9_]*;
 INT: [0-9]+;
-
-
-
-
 
 COMMENT: '//' ~[\r\n]* -> skip;
