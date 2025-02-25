@@ -71,15 +71,6 @@ class EpicLangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EpicLangParser#AndExpr.
-    def enterAndExpr(self, ctx:EpicLangParser.AndExprContext):
-        pass
-
-    # Exit a parse tree produced by EpicLangParser#AndExpr.
-    def exitAndExpr(self, ctx:EpicLangParser.AndExprContext):
-        pass
-
-
     # Enter a parse tree produced by EpicLangParser#ListLiteralIndexExpr.
     def enterListLiteralIndexExpr(self, ctx:EpicLangParser.ListLiteralIndexExprContext):
         pass
@@ -95,15 +86,6 @@ class EpicLangListener(ParseTreeListener):
 
     # Exit a parse tree produced by EpicLangParser#UnaryExpr.
     def exitUnaryExpr(self, ctx:EpicLangParser.UnaryExprContext):
-        pass
-
-
-    # Enter a parse tree produced by EpicLangParser#OrExpr.
-    def enterOrExpr(self, ctx:EpicLangParser.OrExprContext):
-        pass
-
-    # Exit a parse tree produced by EpicLangParser#OrExpr.
-    def exitOrExpr(self, ctx:EpicLangParser.OrExprContext):
         pass
 
 
@@ -197,6 +179,15 @@ class EpicLangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by EpicLangParser#LogicalExpr.
+    def enterLogicalExpr(self, ctx:EpicLangParser.LogicalExprContext):
+        pass
+
+    # Exit a parse tree produced by EpicLangParser#LogicalExpr.
+    def exitLogicalExpr(self, ctx:EpicLangParser.LogicalExprContext):
+        pass
+
+
     # Enter a parse tree produced by EpicLangParser#ExpressionListIndexExpr.
     def enterExpressionListIndexExpr(self, ctx:EpicLangParser.ExpressionListIndexExprContext):
         pass
@@ -233,12 +224,21 @@ class EpicLangListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by EpicLangParser#assignment.
-    def enterAssignment(self, ctx:EpicLangParser.AssignmentContext):
+    # Enter a parse tree produced by EpicLangParser#SimpleAssignment.
+    def enterSimpleAssignment(self, ctx:EpicLangParser.SimpleAssignmentContext):
         pass
 
-    # Exit a parse tree produced by EpicLangParser#assignment.
-    def exitAssignment(self, ctx:EpicLangParser.AssignmentContext):
+    # Exit a parse tree produced by EpicLangParser#SimpleAssignment.
+    def exitSimpleAssignment(self, ctx:EpicLangParser.SimpleAssignmentContext):
+        pass
+
+
+    # Enter a parse tree produced by EpicLangParser#ListIndexAssignment.
+    def enterListIndexAssignment(self, ctx:EpicLangParser.ListIndexAssignmentContext):
+        pass
+
+    # Exit a parse tree produced by EpicLangParser#ListIndexAssignment.
+    def exitListIndexAssignment(self, ctx:EpicLangParser.ListIndexAssignmentContext):
         pass
 
 

@@ -44,11 +44,6 @@ class EpicLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EpicLangParser#AndExpr.
-    def visitAndExpr(self, ctx:EpicLangParser.AndExprContext):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by EpicLangParser#ListLiteralIndexExpr.
     def visitListLiteralIndexExpr(self, ctx:EpicLangParser.ListLiteralIndexExprContext):
         return self.visitChildren(ctx)
@@ -56,11 +51,6 @@ class EpicLangVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by EpicLangParser#UnaryExpr.
     def visitUnaryExpr(self, ctx:EpicLangParser.UnaryExprContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by EpicLangParser#OrExpr.
-    def visitOrExpr(self, ctx:EpicLangParser.OrExprContext):
         return self.visitChildren(ctx)
 
 
@@ -114,6 +104,11 @@ class EpicLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by EpicLangParser#LogicalExpr.
+    def visitLogicalExpr(self, ctx:EpicLangParser.LogicalExprContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by EpicLangParser#ExpressionListIndexExpr.
     def visitExpressionListIndexExpr(self, ctx:EpicLangParser.ExpressionListIndexExprContext):
         return self.visitChildren(ctx)
@@ -134,8 +129,13 @@ class EpicLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by EpicLangParser#assignment.
-    def visitAssignment(self, ctx:EpicLangParser.AssignmentContext):
+    # Visit a parse tree produced by EpicLangParser#SimpleAssignment.
+    def visitSimpleAssignment(self, ctx:EpicLangParser.SimpleAssignmentContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by EpicLangParser#ListIndexAssignment.
+    def visitListIndexAssignment(self, ctx:EpicLangParser.ListIndexAssignmentContext):
         return self.visitChildren(ctx)
 
 

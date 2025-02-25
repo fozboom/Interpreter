@@ -28,3 +28,4 @@ uv.lock
 __pycache__/EpicLangLexer.cpython-312.pyc
 __pycache__/EpicLangParser.cpython-312.pyc
 __pycache__/EpicLangVisitor.cpython-312.pyc
+.idea/*

@@ -10,87 +10,89 @@ else:
 
 def serializedATN():
     return [
-        4,1,45,233,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,45,237,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,1,0,5,0,40,8,0,
         10,0,12,0,43,9,0,1,0,1,0,1,1,1,1,1,1,1,1,3,1,51,8,1,1,1,1,1,1,1,
         1,2,1,2,1,2,5,2,59,8,2,10,2,12,2,62,9,2,1,3,1,3,5,3,66,8,3,10,3,
         12,3,69,9,3,1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,
-        1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,94,8,4,1,5,1,5,1,5,1,
-        6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,
-        7,1,7,1,7,1,7,1,7,3,7,120,8,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,
-        7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,5,7,142,8,7,10,7,12,
-        7,145,9,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,154,8,8,10,8,12,8,157,
-        9,8,1,9,1,9,1,9,3,9,162,8,9,1,9,1,9,1,9,1,9,1,9,1,9,3,9,170,8,9,
-        1,10,1,10,1,10,5,10,175,8,10,10,10,12,10,178,9,10,1,11,1,11,1,11,
-        1,11,1,12,1,12,1,12,1,12,1,12,1,12,3,12,190,8,12,1,13,1,13,1,13,
-        1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,14,1,15,1,15,
-        3,15,208,8,15,1,16,1,16,1,16,1,17,1,17,1,17,1,17,1,17,3,17,218,8,
-        17,1,18,1,18,1,18,1,18,5,18,224,8,18,10,18,12,18,227,9,18,3,18,229,
-        8,18,1,18,1,18,1,18,0,1,14,19,0,2,4,6,8,10,12,14,16,18,20,22,24,
-        26,28,30,32,34,36,0,5,1,0,9,11,1,0,12,14,1,0,10,11,1,0,15,18,1,0,
-        19,20,253,0,41,1,0,0,0,2,46,1,0,0,0,4,55,1,0,0,0,6,63,1,0,0,0,8,
-        93,1,0,0,0,10,95,1,0,0,0,12,98,1,0,0,0,14,119,1,0,0,0,16,146,1,0,
-        0,0,18,169,1,0,0,0,20,171,1,0,0,0,22,179,1,0,0,0,24,183,1,0,0,0,
-        26,191,1,0,0,0,28,196,1,0,0,0,30,205,1,0,0,0,32,209,1,0,0,0,34,217,
-        1,0,0,0,36,219,1,0,0,0,38,40,3,2,1,0,39,38,1,0,0,0,40,43,1,0,0,0,
-        41,39,1,0,0,0,41,42,1,0,0,0,42,44,1,0,0,0,43,41,1,0,0,0,44,45,5,
-        0,0,1,45,1,1,0,0,0,46,47,5,25,0,0,47,48,5,43,0,0,48,50,5,1,0,0,49,
-        51,3,4,2,0,50,49,1,0,0,0,50,51,1,0,0,0,51,52,1,0,0,0,52,53,5,2,0,
-        0,53,54,3,6,3,0,54,3,1,0,0,0,55,60,5,43,0,0,56,57,5,3,0,0,57,59,
-        5,43,0,0,58,56,1,0,0,0,59,62,1,0,0,0,60,58,1,0,0,0,60,61,1,0,0,0,
-        61,5,1,0,0,0,62,60,1,0,0,0,63,67,5,4,0,0,64,66,3,8,4,0,65,64,1,0,
-        0,0,66,69,1,0,0,0,67,65,1,0,0,0,67,68,1,0,0,0,68,70,1,0,0,0,69,67,
-        1,0,0,0,70,71,5,5,0,0,71,7,1,0,0,0,72,94,3,6,3,0,73,74,3,18,9,0,
-        74,75,5,6,0,0,75,94,1,0,0,0,76,77,3,14,7,0,77,78,5,6,0,0,78,94,1,
-        0,0,0,79,80,3,22,11,0,80,81,5,6,0,0,81,94,1,0,0,0,82,94,3,24,12,
-        0,83,94,3,26,13,0,84,94,3,28,14,0,85,86,3,30,15,0,86,87,5,6,0,0,
-        87,94,1,0,0,0,88,89,3,32,16,0,89,90,5,6,0,0,90,94,1,0,0,0,91,94,
-        3,10,5,0,92,94,3,12,6,0,93,72,1,0,0,0,93,73,1,0,0,0,93,76,1,0,0,
-        0,93,79,1,0,0,0,93,82,1,0,0,0,93,83,1,0,0,0,93,84,1,0,0,0,93,85,
-        1,0,0,0,93,88,1,0,0,0,93,91,1,0,0,0,93,92,1,0,0,0,94,9,1,0,0,0,95,
-        96,5,26,0,0,96,97,5,6,0,0,97,11,1,0,0,0,98,99,5,27,0,0,99,100,5,
-        6,0,0,100,13,1,0,0,0,101,102,6,7,-1,0,102,103,5,43,0,0,103,120,3,
-        16,8,0,104,120,3,34,17,0,105,120,3,36,18,0,106,107,3,36,18,0,107,
-        108,5,7,0,0,108,109,3,14,7,0,109,110,5,8,0,0,110,120,1,0,0,0,111,
-        112,7,0,0,0,112,120,3,14,7,10,113,114,5,1,0,0,114,115,3,14,7,0,115,
-        116,5,2,0,0,116,120,1,0,0,0,117,120,3,18,9,0,118,120,5,43,0,0,119,
-        101,1,0,0,0,119,104,1,0,0,0,119,105,1,0,0,0,119,106,1,0,0,0,119,
-        111,1,0,0,0,119,113,1,0,0,0,119,117,1,0,0,0,119,118,1,0,0,0,120,
-        143,1,0,0,0,121,122,10,8,0,0,122,123,7,1,0,0,123,142,3,14,7,9,124,
-        125,10,7,0,0,125,126,7,2,0,0,126,142,3,14,7,8,127,128,10,6,0,0,128,
-        129,7,3,0,0,129,142,3,14,7,7,130,131,10,5,0,0,131,132,7,4,0,0,132,
-        142,3,14,7,6,133,134,10,4,0,0,134,135,5,21,0,0,135,142,3,14,7,5,
-        136,137,10,3,0,0,137,138,5,22,0,0,138,142,3,14,7,4,139,140,10,14,
-        0,0,140,142,3,16,8,0,141,121,1,0,0,0,141,124,1,0,0,0,141,127,1,0,
-        0,0,141,130,1,0,0,0,141,133,1,0,0,0,141,136,1,0,0,0,141,139,1,0,
-        0,0,142,145,1,0,0,0,143,141,1,0,0,0,143,144,1,0,0,0,144,15,1,0,0,
-        0,145,143,1,0,0,0,146,147,5,7,0,0,147,148,3,14,7,0,148,155,5,8,0,
-        0,149,150,5,7,0,0,150,151,3,14,7,0,151,152,5,8,0,0,152,154,1,0,0,
-        0,153,149,1,0,0,0,154,157,1,0,0,0,155,153,1,0,0,0,155,156,1,0,0,
-        0,156,17,1,0,0,0,157,155,1,0,0,0,158,159,5,43,0,0,159,161,5,1,0,
-        0,160,162,3,20,10,0,161,160,1,0,0,0,161,162,1,0,0,0,162,163,1,0,
-        0,0,163,170,5,2,0,0,164,165,5,34,0,0,165,166,5,1,0,0,166,167,3,14,
-        7,0,167,168,5,2,0,0,168,170,1,0,0,0,169,158,1,0,0,0,169,164,1,0,
-        0,0,170,19,1,0,0,0,171,176,3,14,7,0,172,173,5,3,0,0,173,175,3,14,
-        7,0,174,172,1,0,0,0,175,178,1,0,0,0,176,174,1,0,0,0,176,177,1,0,
-        0,0,177,21,1,0,0,0,178,176,1,0,0,0,179,180,5,43,0,0,180,181,5,23,
-        0,0,181,182,3,14,7,0,182,23,1,0,0,0,183,184,5,33,0,0,184,185,3,14,
-        7,0,185,186,5,38,0,0,186,189,3,8,4,0,187,188,5,29,0,0,188,190,3,
-        8,4,0,189,187,1,0,0,0,189,190,1,0,0,0,190,25,1,0,0,0,191,192,5,40,
-        0,0,192,193,3,14,7,0,193,194,5,28,0,0,194,195,3,8,4,0,195,27,1,0,
-        0,0,196,197,5,31,0,0,197,198,5,43,0,0,198,199,5,32,0,0,199,200,3,
-        14,7,0,200,201,5,41,0,0,201,202,3,14,7,0,202,203,5,28,0,0,203,204,
-        3,8,4,0,204,29,1,0,0,0,205,207,5,37,0,0,206,208,3,14,7,0,207,206,
-        1,0,0,0,207,208,1,0,0,0,208,31,1,0,0,0,209,210,5,36,0,0,210,211,
-        3,14,7,0,211,33,1,0,0,0,212,218,5,44,0,0,213,218,5,39,0,0,214,218,
-        5,30,0,0,215,218,5,35,0,0,216,218,3,36,18,0,217,212,1,0,0,0,217,
-        213,1,0,0,0,217,214,1,0,0,0,217,215,1,0,0,0,217,216,1,0,0,0,218,
-        35,1,0,0,0,219,228,5,7,0,0,220,225,3,14,7,0,221,222,5,3,0,0,222,
-        224,3,14,7,0,223,221,1,0,0,0,224,227,1,0,0,0,225,223,1,0,0,0,225,
-        226,1,0,0,0,226,229,1,0,0,0,227,225,1,0,0,0,228,220,1,0,0,0,228,
-        229,1,0,0,0,229,230,1,0,0,0,230,231,5,8,0,0,231,37,1,0,0,0,17,41,
-        50,60,67,93,119,141,143,155,161,169,176,189,207,217,225,228
+        1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,95,8,4,1,5,1,5,1,
+        5,1,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,
+        7,1,7,1,7,1,7,1,7,1,7,3,7,121,8,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,
+        7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,5,7,140,8,7,10,7,12,7,143,
+        9,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,152,8,8,10,8,12,8,155,9,8,1,
+        9,1,9,1,9,3,9,160,8,9,1,9,1,9,1,9,1,9,1,9,1,9,3,9,168,8,9,1,10,1,
+        10,1,10,5,10,173,8,10,10,10,12,10,176,9,10,1,11,1,11,1,11,1,11,1,
+        11,1,11,1,11,1,11,3,11,186,8,11,1,12,1,12,1,12,1,12,1,12,1,12,3,
+        12,194,8,12,1,13,1,13,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,
+        14,1,14,1,14,1,14,1,15,1,15,3,15,212,8,15,1,16,1,16,1,16,1,17,1,
+        17,1,17,1,17,1,17,3,17,222,8,17,1,18,1,18,1,18,1,18,5,18,228,8,18,
+        10,18,12,18,231,9,18,3,18,233,8,18,1,18,1,18,1,18,0,1,14,19,0,2,
+        4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,0,6,1,0,9,11,1,0,
+        12,14,1,0,10,11,1,0,15,18,1,0,19,20,1,0,21,22,258,0,41,1,0,0,0,2,
+        46,1,0,0,0,4,55,1,0,0,0,6,63,1,0,0,0,8,94,1,0,0,0,10,96,1,0,0,0,
+        12,99,1,0,0,0,14,120,1,0,0,0,16,144,1,0,0,0,18,167,1,0,0,0,20,169,
+        1,0,0,0,22,185,1,0,0,0,24,187,1,0,0,0,26,195,1,0,0,0,28,200,1,0,
+        0,0,30,209,1,0,0,0,32,213,1,0,0,0,34,221,1,0,0,0,36,223,1,0,0,0,
+        38,40,3,2,1,0,39,38,1,0,0,0,40,43,1,0,0,0,41,39,1,0,0,0,41,42,1,
+        0,0,0,42,44,1,0,0,0,43,41,1,0,0,0,44,45,5,0,0,1,45,1,1,0,0,0,46,
+        47,5,25,0,0,47,48,5,43,0,0,48,50,5,1,0,0,49,51,3,4,2,0,50,49,1,0,
+        0,0,50,51,1,0,0,0,51,52,1,0,0,0,52,53,5,2,0,0,53,54,3,6,3,0,54,3,
+        1,0,0,0,55,60,5,43,0,0,56,57,5,3,0,0,57,59,5,43,0,0,58,56,1,0,0,
+        0,59,62,1,0,0,0,60,58,1,0,0,0,60,61,1,0,0,0,61,5,1,0,0,0,62,60,1,
+        0,0,0,63,67,5,4,0,0,64,66,3,8,4,0,65,64,1,0,0,0,66,69,1,0,0,0,67,
+        65,1,0,0,0,67,68,1,0,0,0,68,70,1,0,0,0,69,67,1,0,0,0,70,71,5,5,0,
+        0,71,7,1,0,0,0,72,95,3,6,3,0,73,74,3,18,9,0,74,75,5,6,0,0,75,95,
+        1,0,0,0,76,77,3,14,7,0,77,78,5,6,0,0,78,95,1,0,0,0,79,80,3,22,11,
+        0,80,81,5,6,0,0,81,95,1,0,0,0,82,95,3,24,12,0,83,95,3,26,13,0,84,
+        95,3,28,14,0,85,86,3,30,15,0,86,87,5,6,0,0,87,95,1,0,0,0,88,89,3,
+        32,16,0,89,90,5,6,0,0,90,95,1,0,0,0,91,95,3,10,5,0,92,95,3,12,6,
+        0,93,95,5,6,0,0,94,72,1,0,0,0,94,73,1,0,0,0,94,76,1,0,0,0,94,79,
+        1,0,0,0,94,82,1,0,0,0,94,83,1,0,0,0,94,84,1,0,0,0,94,85,1,0,0,0,
+        94,88,1,0,0,0,94,91,1,0,0,0,94,92,1,0,0,0,94,93,1,0,0,0,95,9,1,0,
+        0,0,96,97,5,26,0,0,97,98,5,6,0,0,98,11,1,0,0,0,99,100,5,27,0,0,100,
+        101,5,6,0,0,101,13,1,0,0,0,102,103,6,7,-1,0,103,104,5,43,0,0,104,
+        121,3,16,8,0,105,121,3,34,17,0,106,121,3,36,18,0,107,108,3,36,18,
+        0,108,109,5,7,0,0,109,110,3,14,7,0,110,111,5,8,0,0,111,121,1,0,0,
+        0,112,113,7,0,0,0,113,121,3,14,7,9,114,115,5,1,0,0,115,116,3,14,
+        7,0,116,117,5,2,0,0,117,121,1,0,0,0,118,121,3,18,9,0,119,121,5,43,
+        0,0,120,102,1,0,0,0,120,105,1,0,0,0,120,106,1,0,0,0,120,107,1,0,
+        0,0,120,112,1,0,0,0,120,114,1,0,0,0,120,118,1,0,0,0,120,119,1,0,
+        0,0,121,141,1,0,0,0,122,123,10,7,0,0,123,124,7,1,0,0,124,140,3,14,
+        7,8,125,126,10,6,0,0,126,127,7,2,0,0,127,140,3,14,7,7,128,129,10,
+        5,0,0,129,130,7,3,0,0,130,140,3,14,7,6,131,132,10,4,0,0,132,133,
+        7,4,0,0,133,140,3,14,7,5,134,135,10,3,0,0,135,136,7,5,0,0,136,140,
+        3,14,7,4,137,138,10,13,0,0,138,140,3,16,8,0,139,122,1,0,0,0,139,
+        125,1,0,0,0,139,128,1,0,0,0,139,131,1,0,0,0,139,134,1,0,0,0,139,
+        137,1,0,0,0,140,143,1,0,0,0,141,139,1,0,0,0,141,142,1,0,0,0,142,
+        15,1,0,0,0,143,141,1,0,0,0,144,145,5,7,0,0,145,146,3,14,7,0,146,
+        153,5,8,0,0,147,148,5,7,0,0,148,149,3,14,7,0,149,150,5,8,0,0,150,
+        152,1,0,0,0,151,147,1,0,0,0,152,155,1,0,0,0,153,151,1,0,0,0,153,
+        154,1,0,0,0,154,17,1,0,0,0,155,153,1,0,0,0,156,157,5,43,0,0,157,
+        159,5,1,0,0,158,160,3,20,10,0,159,158,1,0,0,0,159,160,1,0,0,0,160,
+        161,1,0,0,0,161,168,5,2,0,0,162,163,5,34,0,0,163,164,5,1,0,0,164,
+        165,3,14,7,0,165,166,5,2,0,0,166,168,1,0,0,0,167,156,1,0,0,0,167,
+        162,1,0,0,0,168,19,1,0,0,0,169,174,3,14,7,0,170,171,5,3,0,0,171,
+        173,3,14,7,0,172,170,1,0,0,0,173,176,1,0,0,0,174,172,1,0,0,0,174,
+        175,1,0,0,0,175,21,1,0,0,0,176,174,1,0,0,0,177,178,5,43,0,0,178,
+        179,5,23,0,0,179,186,3,14,7,0,180,181,5,43,0,0,181,182,3,16,8,0,
+        182,183,5,23,0,0,183,184,3,14,7,0,184,186,1,0,0,0,185,177,1,0,0,
+        0,185,180,1,0,0,0,186,23,1,0,0,0,187,188,5,33,0,0,188,189,3,14,7,
+        0,189,190,5,38,0,0,190,193,3,8,4,0,191,192,5,29,0,0,192,194,3,8,
+        4,0,193,191,1,0,0,0,193,194,1,0,0,0,194,25,1,0,0,0,195,196,5,40,
+        0,0,196,197,3,14,7,0,197,198,5,28,0,0,198,199,3,8,4,0,199,27,1,0,
+        0,0,200,201,5,31,0,0,201,202,5,43,0,0,202,203,5,32,0,0,203,204,3,
+        14,7,0,204,205,5,41,0,0,205,206,3,14,7,0,206,207,5,28,0,0,207,208,
+        3,8,4,0,208,29,1,0,0,0,209,211,5,37,0,0,210,212,3,14,7,0,211,210,
+        1,0,0,0,211,212,1,0,0,0,212,31,1,0,0,0,213,214,5,36,0,0,214,215,
+        3,14,7,0,215,33,1,0,0,0,216,222,5,44,0,0,217,222,5,39,0,0,218,222,
+        5,30,0,0,219,222,5,35,0,0,220,222,3,36,18,0,221,216,1,0,0,0,221,
+        217,1,0,0,0,221,218,1,0,0,0,221,219,1,0,0,0,221,220,1,0,0,0,222,
+        35,1,0,0,0,223,232,5,7,0,0,224,229,3,14,7,0,225,226,5,3,0,0,226,
+        228,3,14,7,0,227,225,1,0,0,0,228,231,1,0,0,0,229,227,1,0,0,0,229,
+        230,1,0,0,0,230,233,1,0,0,0,231,229,1,0,0,0,232,224,1,0,0,0,232,
+        233,1,0,0,0,233,234,1,0,0,0,234,235,5,8,0,0,235,37,1,0,0,0,18,41,
+        50,60,67,94,120,139,141,153,159,167,174,185,193,211,221,229,232
     ]
 
 class EpicLangParser ( Parser ):
@@ -453,7 +455,7 @@ class EpicLangParser ( Parser ):
             self.state = 67
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 28307257036434) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 28307257036498) != 0):
                 self.state = 64
                 self.statement()
                 self.state = 69
@@ -547,7 +549,7 @@ class EpicLangParser ( Parser ):
         localctx = EpicLangParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_statement)
         try:
-            self.state = 93
+            self.state = 94
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,4,self._ctx)
             if la_ == 1:
@@ -626,6 +628,12 @@ class EpicLangParser ( Parser ):
                 self.continue_()
                 pass
 
+            elif la_ == 12:
+                self.enterOuterAlt(localctx, 12)
+                self.state = 93
+                self.match(EpicLangParser.T__5)
+                pass
+
 
         except RecognitionException as re:
             localctx.exception = re
@@ -672,9 +680,9 @@ class EpicLangParser ( Parser ):
         self.enterRule(localctx, 10, self.RULE_break)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 95
-            self.match(EpicLangParser.BREAK)
             self.state = 96
+            self.match(EpicLangParser.BREAK)
+            self.state = 97
             self.match(EpicLangParser.T__5)
         except RecognitionException as re:
             localctx.exception = re
@@ -721,9 +729,9 @@ class EpicLangParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_continue)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 98
-            self.match(EpicLangParser.CONTINUE)
             self.state = 99
+            self.match(EpicLangParser.CONTINUE)
+            self.state = 100
             self.match(EpicLangParser.T__5)
         except RecognitionException as re:
             localctx.exception = re
@@ -748,35 +756,6 @@ class EpicLangParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
-
-
-    class AndExprContext(ExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EpicLangParser.ExpressionContext
-            super().__init__(parser)
-            self.op = None # Token
-            self.copyFrom(ctx)
-
-        def expression(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(EpicLangParser.ExpressionContext)
-            else:
-                return self.getTypedRuleContext(EpicLangParser.ExpressionContext,i)
-
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAndExpr" ):
-                listener.enterAndExpr(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAndExpr" ):
-                listener.exitAndExpr(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAndExpr" ):
-                return visitor.visitAndExpr(self)
-            else:
-                return visitor.visitChildren(self)
 
 
     class ListLiteralIndexExprContext(ExpressionContext):
@@ -829,35 +808,6 @@ class EpicLangParser ( Parser ):
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitUnaryExpr" ):
                 return visitor.visitUnaryExpr(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-    class OrExprContext(ExpressionContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a EpicLangParser.ExpressionContext
-            super().__init__(parser)
-            self.op = None # Token
-            self.copyFrom(ctx)
-
-        def expression(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(EpicLangParser.ExpressionContext)
-            else:
-                return self.getTypedRuleContext(EpicLangParser.ExpressionContext,i)
-
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterOrExpr" ):
-                listener.enterOrExpr(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitOrExpr" ):
-                listener.exitOrExpr(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitOrExpr" ):
-                return visitor.visitOrExpr(self)
             else:
                 return visitor.visitChildren(self)
 
@@ -1129,6 +1079,35 @@ class EpicLangParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class LogicalExprContext(ExpressionContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EpicLangParser.ExpressionContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def expression(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(EpicLangParser.ExpressionContext)
+            else:
+                return self.getTypedRuleContext(EpicLangParser.ExpressionContext,i)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLogicalExpr" ):
+                listener.enterLogicalExpr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLogicalExpr" ):
+                listener.exitLogicalExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogicalExpr" ):
+                return visitor.visitLogicalExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
     class ExpressionListIndexExprContext(ExpressionContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a EpicLangParser.ExpressionContext
@@ -1168,7 +1147,7 @@ class EpicLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 119
+            self.state = 120
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
             if la_ == 1:
@@ -1176,9 +1155,9 @@ class EpicLangParser ( Parser ):
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 102
-                self.match(EpicLangParser.IDENTIFIER)
                 self.state = 103
+                self.match(EpicLangParser.IDENTIFIER)
+                self.state = 104
                 self.indexSequence()
                 pass
 
@@ -1186,7 +1165,7 @@ class EpicLangParser ( Parser ):
                 localctx = EpicLangParser.LiteralExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 104
+                self.state = 105
                 self.literal()
                 pass
 
@@ -1194,7 +1173,7 @@ class EpicLangParser ( Parser ):
                 localctx = EpicLangParser.ListLiteralExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 105
+                self.state = 106
                 self.listLiteral()
                 pass
 
@@ -1202,13 +1181,13 @@ class EpicLangParser ( Parser ):
                 localctx = EpicLangParser.ListLiteralIndexExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 106
-                self.listLiteral()
                 self.state = 107
-                self.match(EpicLangParser.T__6)
+                self.listLiteral()
                 self.state = 108
-                self.expression(0)
+                self.match(EpicLangParser.T__6)
                 self.state = 109
+                self.expression(0)
+                self.state = 110
                 self.match(EpicLangParser.T__7)
                 pass
 
@@ -1216,7 +1195,7 @@ class EpicLangParser ( Parser ):
                 localctx = EpicLangParser.UnaryExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 111
+                self.state = 112
                 localctx.op = self._input.LT(1)
                 _la = self._input.LA(1)
                 if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 3584) != 0)):
@@ -1224,19 +1203,19 @@ class EpicLangParser ( Parser ):
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 112
-                self.expression(10)
+                self.state = 113
+                self.expression(9)
                 pass
 
             elif la_ == 6:
                 localctx = EpicLangParser.ParenExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 113
-                self.match(EpicLangParser.T__0)
                 self.state = 114
-                self.expression(0)
+                self.match(EpicLangParser.T__0)
                 self.state = 115
+                self.expression(0)
+                self.state = 116
                 self.match(EpicLangParser.T__1)
                 pass
 
@@ -1244,7 +1223,7 @@ class EpicLangParser ( Parser ):
                 localctx = EpicLangParser.FunctionCallExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 117
+                self.state = 118
                 self.functionCall()
                 pass
 
@@ -1252,13 +1231,13 @@ class EpicLangParser ( Parser ):
                 localctx = EpicLangParser.VarExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 118
+                self.state = 119
                 self.match(EpicLangParser.IDENTIFIER)
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 143
+            self.state = 141
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -1266,17 +1245,17 @@ class EpicLangParser ( Parser ):
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 141
+                    self.state = 139
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
                     if la_ == 1:
                         localctx = EpicLangParser.MulDivExprContext(self, EpicLangParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 121
-                        if not self.precpred(self._ctx, 8):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
                         self.state = 122
+                        if not self.precpred(self._ctx, 7):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
+                        self.state = 123
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 28672) != 0)):
@@ -1284,18 +1263,18 @@ class EpicLangParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 123
-                        self.expression(9)
+                        self.state = 124
+                        self.expression(8)
                         pass
 
                     elif la_ == 2:
                         localctx = EpicLangParser.AddSubExprContext(self, EpicLangParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 124
-                        if not self.precpred(self._ctx, 7):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
                         self.state = 125
+                        if not self.precpred(self._ctx, 6):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+                        self.state = 126
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==10 or _la==11):
@@ -1303,18 +1282,18 @@ class EpicLangParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 126
-                        self.expression(8)
+                        self.state = 127
+                        self.expression(7)
                         pass
 
                     elif la_ == 3:
                         localctx = EpicLangParser.CompareExprContext(self, EpicLangParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 127
-                        if not self.precpred(self._ctx, 6):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
                         self.state = 128
+                        if not self.precpred(self._ctx, 5):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
+                        self.state = 129
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 491520) != 0)):
@@ -1322,18 +1301,18 @@ class EpicLangParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 129
-                        self.expression(7)
+                        self.state = 130
+                        self.expression(6)
                         pass
 
                     elif la_ == 4:
                         localctx = EpicLangParser.EqualityExprContext(self, EpicLangParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 130
-                        if not self.precpred(self._ctx, 5):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
                         self.state = 131
+                        if not self.precpred(self._ctx, 4):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
+                        self.state = 132
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==19 or _la==20):
@@ -1341,49 +1320,42 @@ class EpicLangParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 132
-                        self.expression(6)
-                        pass
-
-                    elif la_ == 5:
-                        localctx = EpicLangParser.AndExprContext(self, EpicLangParser.ExpressionContext(self, _parentctx, _parentState))
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
                         self.state = 133
-                        if not self.precpred(self._ctx, 4):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 134
-                        localctx.op = self.match(EpicLangParser.T__20)
-                        self.state = 135
                         self.expression(5)
                         pass
 
-                    elif la_ == 6:
-                        localctx = EpicLangParser.OrExprContext(self, EpicLangParser.ExpressionContext(self, _parentctx, _parentState))
+                    elif la_ == 5:
+                        localctx = EpicLangParser.LogicalExprContext(self, EpicLangParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 136
+                        self.state = 134
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                        self.state = 137
-                        localctx.op = self.match(EpicLangParser.T__21)
-                        self.state = 138
+                        self.state = 135
+                        localctx.op = self._input.LT(1)
+                        _la = self._input.LA(1)
+                        if not(_la==21 or _la==22):
+                            localctx.op = self._errHandler.recoverInline(self)
+                        else:
+                            self._errHandler.reportMatch(self)
+                            self.consume()
+                        self.state = 136
                         self.expression(4)
                         pass
 
-                    elif la_ == 7:
+                    elif la_ == 6:
                         localctx = EpicLangParser.ExpressionListIndexExprContext(self, EpicLangParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
-                        self.state = 139
-                        if not self.precpred(self._ctx, 14):
+                        self.state = 137
+                        if not self.precpred(self._ctx, 13):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 14)")
-                        self.state = 140
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 13)")
+                        self.state = 138
                         self.indexSequence()
                         pass
 
              
-                self.state = 145
+                self.state = 143
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
 
@@ -1436,24 +1408,24 @@ class EpicLangParser ( Parser ):
         self.enterRule(localctx, 16, self.RULE_indexSequence)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 146
+            self.state = 144
             self.match(EpicLangParser.T__6)
-            self.state = 147
+            self.state = 145
             self.expression(0)
-            self.state = 148
+            self.state = 146
             self.match(EpicLangParser.T__7)
-            self.state = 155
+            self.state = 153
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 149
+                    self.state = 147
                     self.match(EpicLangParser.T__6)
-                    self.state = 150
+                    self.state = 148
                     self.expression(0)
-                    self.state = 151
+                    self.state = 149
                     self.match(EpicLangParser.T__7) 
-                self.state = 157
+                self.state = 155
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 
@@ -1513,35 +1485,35 @@ class EpicLangParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_functionCall)
         self._la = 0 # Token type
         try:
-            self.state = 169
+            self.state = 167
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [43]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 158
+                self.state = 156
                 self.match(EpicLangParser.IDENTIFIER)
-                self.state = 159
+                self.state = 157
                 self.match(EpicLangParser.T__0)
-                self.state = 161
+                self.state = 159
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & 26990648233602) != 0):
-                    self.state = 160
+                    self.state = 158
                     self.argumentList()
 
 
-                self.state = 163
+                self.state = 161
                 self.match(EpicLangParser.T__1)
                 pass
             elif token in [34]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 164
+                self.state = 162
                 self.match(EpicLangParser.LEN)
-                self.state = 165
+                self.state = 163
                 self.match(EpicLangParser.T__0)
-                self.state = 166
+                self.state = 164
                 self.expression(0)
-                self.state = 167
+                self.state = 165
                 self.match(EpicLangParser.T__1)
                 pass
             else:
@@ -1597,17 +1569,17 @@ class EpicLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 171
+            self.state = 169
             self.expression(0)
-            self.state = 176
+            self.state = 174
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==3:
-                self.state = 172
+                self.state = 170
                 self.match(EpicLangParser.T__2)
-                self.state = 173
+                self.state = 171
                 self.expression(0)
-                self.state = 178
+                self.state = 176
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1627,30 +1599,71 @@ class EpicLangParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+
+        def getRuleIndex(self):
+            return EpicLangParser.RULE_assignment
+
+     
+        def copyFrom(self, ctx:ParserRuleContext):
+            super().copyFrom(ctx)
+
+
+
+    class ListIndexAssignmentContext(AssignmentContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EpicLangParser.AssignmentContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
         def IDENTIFIER(self):
             return self.getToken(EpicLangParser.IDENTIFIER, 0)
+        def indexSequence(self):
+            return self.getTypedRuleContext(EpicLangParser.IndexSequenceContext,0)
 
         def expression(self):
             return self.getTypedRuleContext(EpicLangParser.ExpressionContext,0)
 
 
-        def getRuleIndex(self):
-            return EpicLangParser.RULE_assignment
-
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAssignment" ):
-                listener.enterAssignment(self)
+            if hasattr( listener, "enterListIndexAssignment" ):
+                listener.enterListIndexAssignment(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAssignment" ):
-                listener.exitAssignment(self)
+            if hasattr( listener, "exitListIndexAssignment" ):
+                listener.exitListIndexAssignment(self)
 
         def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignment" ):
-                return visitor.visitAssignment(self)
+            if hasattr( visitor, "visitListIndexAssignment" ):
+                return visitor.visitListIndexAssignment(self)
             else:
                 return visitor.visitChildren(self)
 
+
+    class SimpleAssignmentContext(AssignmentContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a EpicLangParser.AssignmentContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def IDENTIFIER(self):
+            return self.getToken(EpicLangParser.IDENTIFIER, 0)
+        def expression(self):
+            return self.getTypedRuleContext(EpicLangParser.ExpressionContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSimpleAssignment" ):
+                listener.enterSimpleAssignment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSimpleAssignment" ):
+                listener.exitSimpleAssignment(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpleAssignment" ):
+                return visitor.visitSimpleAssignment(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1659,13 +1672,34 @@ class EpicLangParser ( Parser ):
         localctx = EpicLangParser.AssignmentContext(self, self._ctx, self.state)
         self.enterRule(localctx, 22, self.RULE_assignment)
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 179
-            self.match(EpicLangParser.IDENTIFIER)
-            self.state = 180
-            self.match(EpicLangParser.T__22)
-            self.state = 181
-            self.expression(0)
+            self.state = 185
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
+            if la_ == 1:
+                localctx = EpicLangParser.SimpleAssignmentContext(self, localctx)
+                self.enterOuterAlt(localctx, 1)
+                self.state = 177
+                self.match(EpicLangParser.IDENTIFIER)
+                self.state = 178
+                self.match(EpicLangParser.T__22)
+                self.state = 179
+                self.expression(0)
+                pass
+
+            elif la_ == 2:
+                localctx = EpicLangParser.ListIndexAssignmentContext(self, localctx)
+                self.enterOuterAlt(localctx, 2)
+                self.state = 180
+                self.match(EpicLangParser.IDENTIFIER)
+                self.state = 181
+                self.indexSequence()
+                self.state = 182
+                self.match(EpicLangParser.T__22)
+                self.state = 183
+                self.expression(0)
+                pass
+
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1728,21 +1762,21 @@ class EpicLangParser ( Parser ):
         self.enterRule(localctx, 24, self.RULE_ifStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 183
+            self.state = 187
             self.match(EpicLangParser.IF)
-            self.state = 184
+            self.state = 188
             self.expression(0)
-            self.state = 185
-            self.match(EpicLangParser.THEN)
-            self.state = 186
-            self.statement()
             self.state = 189
+            self.match(EpicLangParser.THEN)
+            self.state = 190
+            self.statement()
+            self.state = 193
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
             if la_ == 1:
-                self.state = 187
+                self.state = 191
                 self.match(EpicLangParser.ELSE)
-                self.state = 188
+                self.state = 192
                 self.statement()
 
 
@@ -1802,13 +1836,13 @@ class EpicLangParser ( Parser ):
         self.enterRule(localctx, 26, self.RULE_whileStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 191
+            self.state = 195
             self.match(EpicLangParser.WHILE)
-            self.state = 192
+            self.state = 196
             self.expression(0)
-            self.state = 193
+            self.state = 197
             self.match(EpicLangParser.DO)
-            self.state = 194
+            self.state = 198
             self.statement()
         except RecognitionException as re:
             localctx.exception = re
@@ -1878,21 +1912,21 @@ class EpicLangParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_forStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 196
-            self.match(EpicLangParser.FOR)
-            self.state = 197
-            self.match(EpicLangParser.IDENTIFIER)
-            self.state = 198
-            self.match(EpicLangParser.IN)
-            self.state = 199
-            self.expression(0)
             self.state = 200
-            self.match(EpicLangParser.DOTS)
+            self.match(EpicLangParser.FOR)
             self.state = 201
-            self.expression(0)
+            self.match(EpicLangParser.IDENTIFIER)
             self.state = 202
-            self.match(EpicLangParser.DO)
+            self.match(EpicLangParser.IN)
             self.state = 203
+            self.expression(0)
+            self.state = 204
+            self.match(EpicLangParser.DOTS)
+            self.state = 205
+            self.expression(0)
+            self.state = 206
+            self.match(EpicLangParser.DO)
+            self.state = 207
             self.statement()
         except RecognitionException as re:
             localctx.exception = re
@@ -1944,13 +1978,13 @@ class EpicLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 205
+            self.state = 209
             self.match(EpicLangParser.RETURN)
-            self.state = 207
+            self.state = 211
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 26990648233602) != 0):
-                self.state = 206
+                self.state = 210
                 self.expression(0)
 
 
@@ -2003,9 +2037,9 @@ class EpicLangParser ( Parser ):
         self.enterRule(localctx, 32, self.RULE_printStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 209
+            self.state = 213
             self.match(EpicLangParser.PRINT)
-            self.state = 210
+            self.state = 214
             self.expression(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -2064,32 +2098,32 @@ class EpicLangParser ( Parser ):
         localctx = EpicLangParser.LiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_literal)
         try:
-            self.state = 217
+            self.state = 221
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [44]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 212
+                self.state = 216
                 self.match(EpicLangParser.INT)
                 pass
             elif token in [39]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 213
+                self.state = 217
                 self.match(EpicLangParser.TRUE)
                 pass
             elif token in [30]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 214
+                self.state = 218
                 self.match(EpicLangParser.FALSE)
                 pass
             elif token in [35]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 215
+                self.state = 219
                 self.match(EpicLangParser.NONE)
                 pass
             elif token in [7]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 216
+                self.state = 220
                 self.listLiteral()
                 pass
             else:
@@ -2145,29 +2179,29 @@ class EpicLangParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 219
+            self.state = 223
             self.match(EpicLangParser.T__6)
-            self.state = 228
+            self.state = 232
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & 26990648233602) != 0):
-                self.state = 220
+                self.state = 224
                 self.expression(0)
-                self.state = 225
+                self.state = 229
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==3:
-                    self.state = 221
+                    self.state = 225
                     self.match(EpicLangParser.T__2)
-                    self.state = 222
+                    self.state = 226
                     self.expression(0)
-                    self.state = 227
+                    self.state = 231
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 230
+            self.state = 234
             self.match(EpicLangParser.T__7)
         except RecognitionException as re:
             localctx.exception = re
@@ -2191,31 +2225,27 @@ class EpicLangParser ( Parser ):
 
     def expression_sempred(self, localctx:ExpressionContext, predIndex:int):
             if predIndex == 0:
-                return self.precpred(self._ctx, 8)
-         
-
-            if predIndex == 1:
                 return self.precpred(self._ctx, 7)
          
 
-            if predIndex == 2:
+            if predIndex == 1:
                 return self.precpred(self._ctx, 6)
          
 
-            if predIndex == 3:
+            if predIndex == 2:
                 return self.precpred(self._ctx, 5)
          
 
-            if predIndex == 4:
+            if predIndex == 3:
                 return self.precpred(self._ctx, 4)
          
 
-            if predIndex == 5:
+            if predIndex == 4:
                 return self.precpred(self._ctx, 3)
          
 
-            if predIndex == 6:
-                return self.precpred(self._ctx, 14)
+            if predIndex == 5:
+                return self.precpred(self._ctx, 13)
          
 
 
