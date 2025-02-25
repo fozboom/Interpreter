@@ -177,6 +177,7 @@ class EpicLang(EpicLangVisitor):
             sys.exit(0)
 
         old_value = self.variables.get(var_name, None)
+        self.loop_depth += 1
         try:
             for i in range(start, end):
                 self.variables[var_name] = i
@@ -186,6 +187,7 @@ class EpicLang(EpicLangVisitor):
                 del self.variables[var_name]
             else:
                 self.variables[var_name] = old_value
+            self.loop_depth -= 1
 
     def visitExpression(self, ctx: EpicLangParser.ExpressionContext):
         # If this is a function call
