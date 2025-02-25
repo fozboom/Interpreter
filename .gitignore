@@ -1,10 +1,7 @@
 code.txt
 .vscode/settings.json
-EpicLang.interp
+
 code.txt
-EpicLangListener.py
-EpicLangParser.py
-EpicLangVisitor.py
 uv.lock
 .antlr/EpicLang.tokens
 .antlr/EpicLang.interp
