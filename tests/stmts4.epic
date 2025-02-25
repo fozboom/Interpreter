@@ -1,4 +1,5 @@
 func helper(a,b) {
+    // note that "else" must associate with the nearest "if" here.
     if a then if b then print 1; else print 2;
     print none;
 }
