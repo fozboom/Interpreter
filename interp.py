@@ -10,9 +10,7 @@ from EpicLangVisitor import EpicLangVisitor
 
 class ErrorHandler(ErrorListener):
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
-        print(
-            f"syntax error: {msg}, line: {line}, column: {column}, offendingSymbol: {offendingSymbol}, offendingToken: {offendingSymbol.text}"
-        )
+        print("syntax error")
         sys.exit(0)
 
 
@@ -381,27 +379,48 @@ class EpicLang(EpicLangVisitor):
 
     def visitListIndexAssignment(self, ctx: EpicLangParser.ListIndexAssignmentContext):
         var_name = ctx.IDENTIFIER().getText()
-        index = self.visit(ctx.expression(0))
-        value = self.visit(ctx.expression(1))
+        indices = ctx.indexSequence().expression()
 
         if var_name not in self.variables:
-            print("runtime error")
+            print("runtime error: variable not found")
             sys.exit(0)
 
-        lst = self.variables[var_name]
-        if not isinstance(lst, list):
-            print("runtime error")
+        value = self.variables[var_name]
+
+        # Обрабатываем вложенные индексы
+        for index_expr in indices[:-1]:  # Все индексы, кроме последнего
+            index = self.visit(index_expr)
+
+            if not isinstance(index, int):
+                print("runtime error: index must be an integer")
+                sys.exit(0)
+
+            if not isinstance(value, list):
+                print("runtime error: expected a list")
+                sys.exit(0)
+
+            if index < 0 or index >= len(value):
+                print("runtime error: index out of range")
+                sys.exit(0)
+
+            value = value[index]
+
+        # Обрабатываем последний индекс
+        last_index = self.visit(indices[-1])
+        if not isinstance(last_index, int):
+            print("runtime error: index must be an integer")
             sys.exit(0)
 
-        if not isinstance(index, int):
-            print("runtime error")
+        if not isinstance(value, list):
+            print("runtime error: expected a list")
             sys.exit(0)
 
-        if index < 0 or index >= len(lst):
-            print("runtime error")
+        if last_index < 0 or last_index >= len(value):
+            print("runtime error: index out of range")
             sys.exit(0)
 
-        lst[index] = value
+        # Присваиваем значение
+        value[last_index] = self.visit(ctx.expression())
 
     def visitParenExpr(self, ctx: EpicLangParser.ParenExprContext):
         return self.visit(ctx.expression())
@@ -517,8 +536,8 @@ class EpicLang(EpicLangVisitor):
 
 def main():
     # create input stream
-    # in_stream = FileStream(sys.argv[1])
-    in_stream = FileStream("code.txt")
+    in_stream = FileStream(sys.argv[1])
+    # in_stream = FileStream("code.txt")
     # create a lexer
     lexer = EpicLangLexer(in_stream)
     # for token in lexer.getAllTokens():

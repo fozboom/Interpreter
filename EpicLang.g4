@@ -21,7 +21,8 @@ statement:
 	| returnStatement ';'
 	| printStatement ';'
 	| break
-	| continue;
+	| continue
+	| ';';
 
 break: BREAK ';';
 
@@ -53,8 +54,8 @@ functionCall:
 argumentList: expression (',' expression)*;
 
 assignment:
-	IDENTIFIER '=' expression						# SimpleAssignment
-	| IDENTIFIER '[' expression ']' '=' expression	# ListIndexAssignment;
+	IDENTIFIER '=' expression					# SimpleAssignment
+	| IDENTIFIER indexSequence '=' expression	# ListIndexAssignment;
 
 ifStatement: IF expression THEN statement (ELSE statement)?;
 
