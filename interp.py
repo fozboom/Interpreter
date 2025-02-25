@@ -10,8 +10,15 @@ from EpicLangVisitor import EpicLangVisitor
 
 class ErrorHandler(ErrorListener):
     def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
-        print("syntax error")
+        print(
+            f"syntax error: {msg}, line: {line}, column: {column}, offendingSymbol: {offendingSymbol}, offendingToken: {offendingSymbol.text}"
+        )
         sys.exit(0)
+
+
+class ReturnException(Exception):
+    def __init__(self, value):
+        self.value = value
 
 
 class EpicLang(EpicLangVisitor):
@@ -73,9 +80,12 @@ class EpicLang(EpicLangVisitor):
         self.variables = dict(zip(expected_params, args))
 
         self.return_value = None
-        self.visit(func["block"])
-
-        self.variables = old_variables
+        try:
+            self.visit(func["block"])
+        except ReturnException as e:
+            self.return_value = e.value
+        finally:
+            self.variables = old_variables
 
         return self.return_value
 
@@ -107,23 +117,29 @@ class EpicLang(EpicLangVisitor):
 
     def visitBlock(self, ctx: EpicLangParser.BlockContext):
         for statement in ctx.statement():
-            self.visit(statement)
+            try:
+                self.visit(statement)
+            except ReturnException as e:
+                raise e
 
     def visitWhileStatement(self, ctx: EpicLangParser.WhileStatementContext):
         self.loop_depth += 1
-        while True:
-            condition = self.visit(ctx.expression())
+        try:
+            while True:
+                condition = self.visit(ctx.expression())
 
-            if not isinstance(condition, bool):
-                print("runtime error")
-                sys.exit(0)
+                if not isinstance(condition, bool):
+                    print("runtime error")
+                    sys.exit(0)
 
-            if not condition:
-                break
-
-            self.visit(ctx.statement())
-
-        self.loop_depth -= 1
+                if not condition:
+                    break
+                try:
+                    self.visit(ctx.statement())
+                except ReturnException as e:
+                    raise e
+        finally:
+            self.loop_depth -= 1
 
     def visitFunctionCall(self, ctx: EpicLangParser.FunctionCallContext):
         func_name = ctx.IDENTIFIER().getText()
@@ -149,10 +165,13 @@ class EpicLang(EpicLangVisitor):
         if not isinstance(condition, bool):
             print("runtime error")
             sys.exit(0)
-        if condition:  # if the condition is true
-            self.visit(ctx.statement(0))
-        elif ctx.statement(1):  # if there is an else statement
-            self.visit(ctx.statement(1))
+        try:
+            if condition:  # if the condition is true
+                self.visit(ctx.statement(0))
+            elif ctx.statement(1):  # if there is an else statement
+                self.visit(ctx.statement(1))
+        except ReturnException as e:
+            raise e
 
     def visitLiteralExpr(self, ctx: EpicLangParser.LiteralExprContext):
         literal_ctx = ctx.literal()
@@ -181,7 +200,10 @@ class EpicLang(EpicLangVisitor):
         try:
             for i in range(start, end):
                 self.variables[var_name] = i
-                self.visit(ctx.statement())
+                try:
+                    self.visit(ctx.statement())
+                except ReturnException as e:
+                    raise e
         finally:
             if old_value is None:
                 del self.variables[var_name]
@@ -238,6 +260,8 @@ class EpicLang(EpicLangVisitor):
             self.return_value = self.visit(ctx.expression())
         else:
             self.return_value = None
+
+        raise ReturnException(self.return_value)
 
     def visitAddSubExpr(self, ctx: EpicLangParser.AddSubExprContext):
         op = {
@@ -430,7 +454,6 @@ class EpicLang(EpicLangVisitor):
 
         # Получаем первое значение
         left = self.visit(expressions[0])
-
         # Для каждого следующего выражения проверяем равенство с предыдущим
         for i in range(1, len(expressions)):
             right = self.visit(expressions[i])
@@ -441,7 +464,6 @@ class EpicLang(EpicLangVisitor):
                 if left == right:  # Если хоть одно сравнение истинно
                     return False
             left = right  # Обновляем левый операнд для следующего сравнения
-
         return True
 
     def visitListLiteralIndexExpr(
@@ -495,8 +517,8 @@ class EpicLang(EpicLangVisitor):
 
 def main():
     # create input stream
-    in_stream = FileStream(sys.argv[1])
-    # in_stream = FileStream("code.txt")
+    # in_stream = FileStream(sys.argv[1])
+    in_stream = FileStream("code.txt")
     # create a lexer
     lexer = EpicLangLexer(in_stream)
     # for token in lexer.getAllTokens():
@@ -524,5 +546,6 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except Exception:
+    except Exception as e:
+        print(e)
         sys.exit(1)
