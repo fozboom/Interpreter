@@ -19,6 +19,14 @@ class ReturnException(Exception):
         self.value = value
 
 
+class BreakException(Exception):
+    pass
+
+
+class ContinueException(Exception):
+    pass
+
+
 class EpicLang(EpicLangVisitor):
     def __init__(self):
         super().__init__()
@@ -136,6 +144,10 @@ class EpicLang(EpicLangVisitor):
                     self.visit(ctx.statement())
                 except ReturnException as e:
                     raise e
+                except BreakException:
+                    break
+                except ContinueException:
+                    continue
         finally:
             self.loop_depth -= 1
 
@@ -152,11 +164,13 @@ class EpicLang(EpicLangVisitor):
         if self.loop_depth == 0:
             print("runtime error")
             sys.exit(0)
+        raise BreakException()
 
     def visitContinue(self, ctx: EpicLangParser.ContinueContext):
         if self.loop_depth == 0:
             print("runtime error")
             sys.exit(0)
+        raise ContinueException()
 
     def visitIfStatement(self, ctx: EpicLangParser.IfStatementContext):
         condition = self.visit(ctx.expression())
@@ -202,6 +216,10 @@ class EpicLang(EpicLangVisitor):
                     self.visit(ctx.statement())
                 except ReturnException as e:
                     raise e
+                except BreakException:
+                    break
+                except ContinueException:
+                    continue
         finally:
             if old_value is None:
                 del self.variables[var_name]
